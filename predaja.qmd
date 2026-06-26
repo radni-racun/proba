@@ -13,3 +13,38 @@ Na ovoj stranici predajete zadatke.
   <button onclick="upload()">Pošalji</button>
 
 </div>
+
+<script type="module">
+  import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+
+  const supabaseUrl = "https://jwsvnvvexmwnvjovdbyg.supabase.co";
+  const supabaseKey = "sb_publishable_OJODRwGSdsFkc78-XMO_LQ__B_a2EJ3";
+
+  const supabase = createClient(supabaseUrl, supabaseKey);
+
+  window.upload = async function () {
+    const ime = document.getElementById("ime").value.trim();
+    const prezime = document.getElementById("prezime").value.trim();
+    const file = document.getElementById("file").files[0];
+
+    if (!ime || !prezime || !file) {
+      alert("Popuni ime, prezime i odaberi file.");
+      return;
+    }
+
+    const filePath = `${ime}_${prezime}/${Date.now()}-${file.name}`;
+
+    const { data, error } = await supabase.storage
+      .from("submissions")
+      .upload(filePath, file);
+
+    if (error) {
+      console.error(error);
+      alert("Greška pri uploadu");
+      return;
+    }
+
+    alert("Upload uspješan!");
+    console.log("Upload data:", data);
+  };
+</script>
