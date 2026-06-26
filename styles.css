@@ -94,13 +94,12 @@ body {
 
   box-sizing: border-box;
 }
-
 mjx-container {
-  display: inline-block;
+  display: inline-block !important;
 }
 
 mjx-container[display="true"] {
-  display: block;
+  display: block !important;
   max-width: 100%;
   overflow-x: auto;
   margin: 0.8em 0;
