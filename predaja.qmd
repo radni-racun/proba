@@ -1,3 +1,15 @@
 # Predaja zadataka
 
 Na ovoj stranici predajete zadatke.
+
+
+<div style="max-width: 500px; display: flex; flex-direction: column; gap: 10px;">
+  
+  <input type="text" id="ime" placeholder="Ime" />
+  <input type="text" id="prezime" placeholder="Prezime" />
+
+  <input type="file" id="file" />
+
+  <button onclick="upload()">Pošalji</button>
+
+</div>
