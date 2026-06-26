@@ -95,17 +95,14 @@ body {
   box-sizing: border-box;
 }
 
-.zadatak mjx-container,
-.rjesenje mjx-container,
-.primjer mjx-container,
-.rjesenje-primjera mjx-container,
-.teorem mjx-container {
-  font-size: 1.05em !important;
-  overflow-x: auto;
-  overflow-y: hidden;
-
+mjx-container[display="true"] {
   display: block;
   max-width: 100%;
+  overflow-x: auto;
 
-  -webkit-overflow-scrolling: touch;
-} 
+  margin: 0.8em 0;
+}
+
+mjx-container {
+  text-align: initial;
+}
