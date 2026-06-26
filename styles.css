@@ -104,5 +104,12 @@ body {
 } */
 
 mjx-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  display: block;
+  max-width: 100%;
+
+  -webkit-overflow-scrolling: touch;
   font-size: 1.05em !important;
 }
