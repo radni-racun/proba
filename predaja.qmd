@@ -44,6 +44,23 @@ Na ovoj stranici predajete zadatke.
       return;
     }
 
+    const { error: dbError } = await supabase
+      .from("predaje")
+      .insert([
+        {
+          ime: ime,
+          prezime: prezime,
+          datoteka: file.name,
+          putanja: path
+        }
+      ]);
+    
+    if (dbError) {
+      console.error("DB ERROR:", dbError);
+      alert("Datoteka je spremljena, ali zapis nije upisan u bazu.");
+      return;
+    }
+
     alert("Upload uspješan!");
     console.log("Upload data:", data);
   };
