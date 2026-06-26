@@ -1,0 +1,7 @@
+---
+title: "O stranici"
+---
+
+Ova web stranica služit će za objavu materijala i zadataka te će pružati mogućnost uploadanja materijala koje korisnik želi. 
+
+Stranica je još u razvoju!

@@ -1,0 +1,31 @@
+project:
+  type: website
+
+website:
+  title: "Probna stranica"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - kombinatorika.qmd
+  announcement: 
+    icon: info-circle
+    content: "**VAŽNO** - web stranica je još u razvoju"
+    type: primary
+    position: below-navbar
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+    lang: "hr"
+    charset: utf-8
+
+language:
+  toc-title-document: "Na ovoj stranici"
+  toc-title-website: "Sadržaj"
+  search-label: "Pretraživanje"

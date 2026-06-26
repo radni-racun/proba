@@ -1,0 +1,108 @@
+body {
+  counter-reset: zadatak;
+  counter-reset: primjer;
+  counter-reset: teorem;
+}
+
+.zadatak {
+  counter-increment: zadatak;
+
+  border-left: 6px solid #4281ff !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  background: #edf3ff !important;
+  border-radius: 6px;
+  padding: 0.8em;
+  margin: 1em 0;
+}
+
+.zadatak::before {
+  content: "Zadatak " counter(zadatak);
+  display: block;
+  font-weight: bold;
+}
+
+.rjesenje {
+  border-left: 6px solid #dcdcdc !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border-radius: 6px;
+  padding: 0.8em;
+  margin: 1em 0;
+  overflow: hidden;
+}
+
+.rjesenje::before {
+  content: "Rješenje " counter(zadatak);
+  display: block;
+  font-weight: bold;
+
+  margin: -1em -1em 1em -1em;
+  padding: 0.6em 1em;
+  background: #f0f0f0;
+  font-weight: bold;
+
+  box-sizing: border-box;
+}
+
+.primjer {
+  counter-increment: primjer;
+  border-left: 5px solid #ffd900 !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border-radius: 6px;
+  padding: 0.8em;
+  margin: 1em 0;
+}
+
+.primjer::before {
+  content: "Primjer " counter(primjer);
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.rjesenje-primjera {
+  border: 2px solid #f1f1f1 !important;
+  border-radius: 4px;
+  padding: 1em
+}
+
+.rjesenje-primjera::before {
+  content: "Rješenje";
+  font-weight: bold;
+}
+
+.teorem{
+  counter-increment: teorem;
+
+  border-left: 5px solid rgb(0, 141, 197) !important;
+  border-radius: 4px;
+  background-color: #fafafa !important;
+  padding: 1em;
+  margin: 1em 0;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.teorem::before {
+  content: "Teorem " counter(teorem);
+  display: block;
+  margin: -1em -1em 1em -1em;
+  padding: 0.6em 1em;
+
+  background: #dbe9ff;
+  font-weight: bold;
+
+  box-sizing: border-box;
+}
+
+/*.zadatak mjx-container,
+.rjesenje mjx-container,
+.primjer mjx-container,
+.rjesenje-primjera mjx-container,
+.teorem mjx-container {
+  font-size: 1.05em !important;
+} */
+
+mjx-container {
+  font-size: 1.05em !important;
+}
