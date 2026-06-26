@@ -9,6 +9,7 @@ website:
         text: Home
       - about.qmd
       - kombinatorika.qmd
+      - predaja.qmd
   announcement: 
     icon: info-circle
     content: "**VAŽNO** - web stranica je još u razvoju"
