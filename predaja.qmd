@@ -2,16 +2,16 @@
 
 Na ovoj stranici predajete zadatke.
 
+<div class="upload-form">
+  <h3>Predaja rješenja</h3>
 
-<div style="max-width: 500px; display: flex; flex-direction: column; gap: 10px;">
-  
-  <input type="text" id="ime" placeholder="Ime" />
-  <input type="text" id="prezime" placeholder="Prezime" />
+  <input type="text" id="ime" placeholder="Ime">
 
-  <input type="file" id="file" />
+  <input type="text" id="prezime" placeholder="Prezime">
 
-  <button onclick="upload()">Pošalji</button>
+  <input type="file" id="file">
 
+  <button onclick="upload()">Pošalji rješenje</button>
 </div>
 
 <script type="module">
