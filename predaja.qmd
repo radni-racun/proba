@@ -56,10 +56,11 @@ Na ovoj stranici predajete zadatke.
       ]);
     
     if (dbError) {
-      console.error("DB ERROR:", dbError);
-      alert("Datoteka je spremljena, ali zapis nije upisan u bazu.");
-      return;
-    }
+      if (dbError) {
+        console.error("DB ERROR:", dbError);
+        alert(JSON.stringify(dbError));
+        return;
+      }
 
     alert("Upload uspješan!");
     console.log("Upload data:", data);
