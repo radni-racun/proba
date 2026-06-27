@@ -40,7 +40,7 @@ Na ovoj stranici predajete zadatke.
 
     if (error) {
       console.error(error);
-      alert("Greška pri uploadu");
+      alert(JSON.stringify(error));
       return;
     }
 
